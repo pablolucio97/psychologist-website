@@ -3,7 +3,9 @@ import Head from 'next/head'
 import { NextImage } from '../components/Next/NextImage'
 import { Title } from '../components/Typography/Title'
 import { Text } from '../components/Typography/Text'
-import { BannerSection, BannerSectionContainer, Container, IntroductionSection, IntroductionSectionContainer, IntroductionSectionContentContainer, IntroductionSectionImageContainer } from '../styles'
+import { BannerSection, BannerSectionContainer, Container, IntroductionSection, IntroductionSectionContainer, IntroductionSectionContentContainer, IntroductionSectionImageContainer, ServicesContainer, ServicesContentContainer, ServicesGroupsContainer } from '../styles'
+import { services } from '../data/data'
+import { GroupInfo } from '../components/Elements/GroupInfo'
 
 const Home: NextPage = () => {
 
@@ -31,20 +33,42 @@ const Home: NextPage = () => {
               imgUrl='/woman.png'
             />
           </IntroductionSectionImageContainer>
-        
+
           <IntroductionSectionContentContainer>
-          <Title 
-          content='Quem sou eu'
-          />
-          <Text
-          content='Meu nome é Simone Alvarenga sou formada em psicologia pela Universidade de São Paulo e venho trabalhando como psicóloga há mais de 17 anos.'
-           />
-          <Text
-          content='Com o propósito de ajudar o máximo de pessoas possíveis, me especializei no estudo da mente humana. Hoje atuo com diversos tratamento que auxiliam na recuperação de experiências traumáticas e psicologicamente prejudiciais.'
-           />
+            <Title
+              content='Quem sou eu'
+            />
+            <Text
+              content='Meu nome é Simone Alvarenga sou formada em psicologia pela Universidade de São Paulo e venho trabalhando como psicóloga há mais de 17 anos.'
+            />
+            <Text
+              content='Com o propósito de ajudar o máximo de pessoas possíveis, me especializei no estudo da mente humana. Hoje atuo com diversos tratamento que auxiliam na recuperação de experiências traumáticas e psicologicamente prejudiciais.'
+            />
           </IntroductionSectionContentContainer>
         </IntroductionSectionContainer>
       </IntroductionSection>
+      <ServicesContainer>
+        <ServicesContentContainer>
+          <Title
+            content='Tratamentos'
+          />
+          <ServicesGroupsContainer>
+            {
+              services.map(service => (
+                <GroupInfo
+                  key={service.title}
+                  title={service.title}
+                  content={service.content}
+                  titleClassName='groupInfoTitle'
+                  contentClassName='groupInfoText'
+                  className='groupContent'
+                />
+              ))
+            }
+
+          </ServicesGroupsContainer>
+        </ServicesContentContainer>
+      </ServicesContainer>
     </Container>
   )
 }

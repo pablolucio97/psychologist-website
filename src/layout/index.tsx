@@ -104,8 +104,8 @@ export default function Layout({ children }: LayoutProps) {
                             onClick={handleToggleDrawer}
                         />
                         <HeaderLink
-                            content='Equipe'
-                            url='/equipe'
+                            content='Tratamentos'
+                            url='/Tratamentos'
                             onClick={handleToggleDrawer}
                         />
                         <HeaderLink
@@ -130,8 +130,8 @@ export default function Layout({ children }: LayoutProps) {
                         url='/'
                     />
                     <HeaderLink
-                        content='Equipe'
-                        url='/equipe'
+                        content='Tratamentos'
+                        url='/Tratamentos'
                     />
                     <HeaderLink
                         content='Contato'
@@ -150,8 +150,8 @@ export default function Layout({ children }: LayoutProps) {
                         content='Sobre nós'
                     />
                     <FooterLink
-                        content='Equipe'
-                        url='/equipe'
+                        content='Tratamentos'
+                        url='/Tratamentos'
                     />
                     <FooterLink
                         content='Contato'
