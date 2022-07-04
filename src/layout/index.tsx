@@ -11,19 +11,17 @@ import { FooterLink } from '../components/Elements/Footer/FooterLink';
 import { FooterSecondSection } from '../components/Elements/Footer/FooterSecondSection';
 import { FooterTitle } from '../components/Elements/Footer/FooterTitle';
 import { Header } from '../components/Elements/Header';
-import { HeaderAuthenticationContainer } from '../components/Elements/Header/HeaderAuthenticationContainer';
 import { HeaderLink } from '../components/Elements/Header/HeaderLink';
 import { HeaderLinksContainer } from '../components/Elements/Header/HeaderLinksContainer';
 import { HeaderLogoContainer } from '../components/Elements/Header/HeaderLogoContainer';
 import { Logo } from '../components/Elements/Logo';
-import { PrimaryButton } from '../components/Elements/PrimaryButton';
 import { SocialIcons } from '../components/Elements/SocialIcons';
 import { TopScrollButton } from '../components/Elements/TopScrollButton';
 import { Text } from '../components/Typography/Text';
 import { Container } from './styles';
 
-import {NextProgressComponent} from '../components/Next/NextProgress'
 import { WhatsappButton } from '../components/Elements/WhatsappButton';
+import { NextProgressComponent } from '../components/Next/NextProgress';
 
 interface LayoutProps {
     children: ReactNode;
@@ -122,7 +120,7 @@ export default function Layout({ children }: LayoutProps) {
                 />
                 <HeaderLogoContainer>
                     <Logo
-                        imageUrl='/logo.png'
+                        imageUrl='/logo.svg'
                         size={headerAnimation ? 'small' : 'medium'}
                     />
                 </HeaderLogoContainer>
