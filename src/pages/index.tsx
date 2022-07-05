@@ -3,13 +3,15 @@ import Head from 'next/head'
 import { NextImage } from '../components/Next/NextImage'
 import { Title } from '../components/Typography/Title'
 import { Text } from '../components/Typography/Text'
-import { BannerSection, BannerSectionContainer, Container, CountUpContainer, CountUpGroupContainer, IntroductionSection, IntroductionSectionContainer, IntroductionSectionContentContainer, IntroductionSectionImageContainer, MetricsSection, MetricsSectionContainer, ServicesContainer, ServicesContentContainer, ServicesGroupsContainer, TestimonialsCardsContainer, TestimonialsSection, TestimonialsSectionContainer } from '../styles'
-import { services, testimonials } from '../data/data'
+import { BannerSection, BannerSectionContainer, ContactSection, ContactSectionAddressContainer, ContactSectionCommunicationContainer, ContactSectionContactInfoContainer, ContactSectionContainer, ContactSectionContentContainer, ContactSectionMapContainer, ContactSectionSocialContainer, Container, CountUpContainer, CountUpGroupContainer, IntroductionSection, IntroductionSectionContainer, IntroductionSectionContentContainer, IntroductionSectionImageContainer, MapContainer, MetricsSection, MetricsSectionContainer, ServicesContainer, ServicesContentContainer, ServicesGroupsContainer, SocialItemContainer, TestimonialsCardsContainer, TestimonialsSection, TestimonialsSectionContainer } from '../styles'
+import { googleMapAddress, services, testimonials } from '../data/data'
 import { GroupInfo } from '../components/Elements/GroupInfo'
 import { TestimonialCard } from '../components/Cards/TestimonialCard'
 import { RevealFade } from '../components/Animations/RevealFade'
 import { SubTitle } from '../components/Typography/SubTitle'
 import dynamic from 'next/dynamic'
+import { GoogleMap } from '../components/Elements/GoogleMap'
+import { FiFacebook, FiInstagram, FiLinkedin } from 'react-icons/fi'
 
 const CountUp = dynamic(() => import('react-countup'), { ssr: false })
 
@@ -29,7 +31,7 @@ const Home: NextPage = () => {
       <BannerSection id='home'>
         <BannerSectionContainer />
       </BannerSection>
-      <IntroductionSection>
+      <IntroductionSection id='quemsoueu'>
         <IntroductionSectionContainer>
           <IntroductionSectionImageContainer>
             <NextImage
@@ -53,7 +55,7 @@ const Home: NextPage = () => {
           </IntroductionSectionContentContainer>
         </IntroductionSectionContainer>
       </IntroductionSection>
-      <ServicesContainer>
+      <ServicesContainer id='tratamentos'>
         <ServicesContentContainer>
           <Title
             content='Tratamentos'
@@ -142,6 +144,70 @@ const Home: NextPage = () => {
           </CountUpGroupContainer>
         </MetricsSectionContainer>
       </MetricsSection>
+      <ContactSection id='contato'>
+        <ContactSectionContainer>
+          <Title
+            content='Contato'
+          />
+          <ContactSectionContentContainer>
+            <ContactSectionMapContainer>
+              <SubTitle
+                content='Visite nossa unidade'
+              />
+              <MapContainer>
+                <GoogleMap
+                  addressUrl={googleMapAddress}
+                  size='small'
+                />
+              </MapContainer>
+            </ContactSectionMapContainer>
+            <ContactSectionContactInfoContainer>
+              <ContactSectionSocialContainer>
+                <SubTitle
+                  content='Redes sociais'
+                />
+                <SocialItemContainer>
+                  <FiInstagram className='socialContactIcons' />
+                  <Text
+                    content='@ramirezesesteticaclinic'
+                  />
+                </SocialItemContainer>
+                <SocialItemContainer>
+                  <FiFacebook className='socialContactIcons' />
+                  <Text
+                    content='ramirezesesteticaclinic'
+                  />
+                </SocialItemContainer>
+                <SocialItemContainer>
+                  <FiLinkedin className='socialContactIcons' />
+                  <Text
+                    content='ramirezesestetica-234221'
+                  />
+                </SocialItemContainer>
+              </ContactSectionSocialContainer>
+              <ContactSectionAddressContainer>
+                <SubTitle
+                  content='Endereço'
+                />
+                <Text
+                  content='Rua João Ozório, número 123, João Monlevade - MG.'
+                />
+              </ContactSectionAddressContainer>
+              <ContactSectionCommunicationContainer>
+                <SubTitle
+                  content='Contato'
+                />
+                <Text
+                  content='(31) 991234123'
+                />
+                <Text
+                  content='esthetic-clinic@ramirez.com'
+                />
+              </ContactSectionCommunicationContainer>
+            </ContactSectionContactInfoContainer>
+          </ContactSectionContentContainer>
+        </ContactSectionContainer>
+      </ContactSection>
  
     </Container>
   )

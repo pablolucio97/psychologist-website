@@ -105,12 +105,12 @@ export default function Layout({ children }: LayoutProps) {
                         />
                         <HeaderLink
                             content='Tratamentos'
-                            url='/Tratamentos'
+                            url='#tratamentos'
                             onClick={handleToggleDrawer}
                         />
                         <HeaderLink
                             content='Contato'
-                            url='/contato'
+                            url='#contato'
                             onClick={handleToggleDrawer}
                         />
                     </Drawer>
@@ -131,11 +131,11 @@ export default function Layout({ children }: LayoutProps) {
                     />
                     <HeaderLink
                         content='Tratamentos'
-                        url='/Tratamentos'
+                        url='#tratamentos'
                     />
                     <HeaderLink
                         content='Contato'
-                        url='/contato'
+                        url='#contato'
                     />
                 </HeaderLinksContainer>
             </Header>
@@ -147,15 +147,19 @@ export default function Layout({ children }: LayoutProps) {
             >
                 <FooterFirstSection>
                     <FooterTitle
-                        content='Sobre nós'
+                        content='Sobre mim'
+                    />
+                    <FooterLink
+                        content='Quem sou eu'
+                        url='#quemsoueu'
                     />
                     <FooterLink
                         content='Tratamentos'
-                        url='/Tratamentos'
+                        url='#tratamentos'
                     />
                     <FooterLink
                         content='Contato'
-                        url='/contato'
+                        url='#contato'
                     />
                 </FooterFirstSection>
                 <FooterSecondSection>

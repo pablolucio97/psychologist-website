@@ -56,3 +56,6 @@ export const services = [
     content: "Essa terapia utilizada técnicas artísticas, como desenhos e pinturas, para acessar o inconsciente dos acientes."
   },
 ];
+
+export const googleMapAddress =
+  "https://maps.google.com/maps?q=joao%20monlevade&t=&z=13&ie=UTF8&iwloc=&output=embed";
