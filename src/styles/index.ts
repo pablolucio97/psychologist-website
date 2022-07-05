@@ -5,6 +5,21 @@ export const Container = styled.div`
   flex-direction: column;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.white100};
+
+  & .testimonialCard{
+  width: 320px;
+  }
+
+  & .groupInfoTitle{
+  color: ${({ theme }) => theme.colors.white100};
+  text-align: left;
+ }
+
+ &  .groupInfoText{
+  color: ${({ theme }) => theme.colors.white100};
+  text-align: justify;
+ }
+
 `
 
 
