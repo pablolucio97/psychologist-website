@@ -26,7 +26,7 @@ const Home: NextPage = () => {
         <meta name="description" content="Landing pages de alta conversão e sites institucionais para o seu negócio." />
         <meta name="keywords" content="pablosilvadev pablo silva psd landing pages" />
         <meta name='author' content='Pablo Silva' />
-        <meta name="theme-color" content="#000000" />
+        <meta name="theme-color" content="#5F2CDE" />
       </Head>
       <BannerSection id='home'>
         <BannerSectionContainer />
