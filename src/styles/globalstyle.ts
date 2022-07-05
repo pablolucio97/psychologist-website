@@ -173,4 +173,11 @@ export const GlobalStyle = createGlobalStyle`
   width: 320px;
  }
 
+ .socialContactIcons{
+    width: 24px;
+    height: 24px;
+    color: ${(props) => props.theme.colors.secondary};
+    margin-right: 8px;
+  }
+
 `;

@@ -169,19 +169,19 @@ const Home: NextPage = () => {
                 <SocialItemContainer>
                   <FiInstagram className='socialContactIcons' />
                   <Text
-                    content='@ramirezesesteticaclinic'
+                    content='@simonepsic'
                   />
                 </SocialItemContainer>
                 <SocialItemContainer>
                   <FiFacebook className='socialContactIcons' />
                   <Text
-                    content='ramirezesesteticaclinic'
+                    content='simonepsic'
                   />
                 </SocialItemContainer>
                 <SocialItemContainer>
                   <FiLinkedin className='socialContactIcons' />
                   <Text
-                    content='ramirezesestetica-234221'
+                    content='simonepsic-234221'
                   />
                 </SocialItemContainer>
               </ContactSectionSocialContainer>

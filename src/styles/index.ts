@@ -52,6 +52,7 @@ export const IntroductionSectionContainer = styled.div`
 export const IntroductionSectionImageContainer = styled.div`
     display: flex;
     width: 40%;
+    margin-right: 56px;
     @media(max-width: 720px){
       width: 100%;
     }
@@ -62,16 +63,17 @@ export const IntroductionSectionContentContainer = styled.div`
   justify-content: space-evenly;
   width: 40%;
   padding-right: 32px;
- 
+  margin-bottom: 40px;
+  
   @media(max-width: 720px){
     width: 100%;
     padding-right: 0;
     flex-direction: column;
     justify-content: space-between;
     & h1{
-    margin-bottom: 12px;
-    margin-top: 12px;
-  }
+      margin-bottom: 12px;
+      margin-top: 12px;
+    }
     
   }
   `;
@@ -82,6 +84,9 @@ export const ServicesContainer = styled.section`
   min-height: 64vh;
   padding: 40px;
   background-color: ${({ theme }) => theme.colors.secondary_light};
+  @media(max-width: 720px){
+    padding: 0;
+  }
 `
 export const ServicesContentContainer = styled.section`
   display: flex;
@@ -122,10 +127,17 @@ export const TestimonialsSectionContainer = styled.div`
     color: ${({ theme }) => theme.colors.black100};
     font-weight: 800;
     text-align: center;
+    @media(max-width: 720px){
+     
+    }
   }
   @media (max-width: 1080px) {
     flex-direction: column;
   }
+  @media(max-width: 720px){
+  padding: 0;
+  margin: 40px auto;
+}
 `;
 
 export const TestimonialsCardsContainer = styled.div`
@@ -214,6 +226,9 @@ export const ContactSectionContainer = styled.div`
   margin: 0 auto;
   padding: 80px 40px;
   background-color: ${({ theme }) => theme.colors.white100};
+  @media (max-width: 720px) {
+    padding: 40px 40px 0;
+  }
 `;
 
 export const ContactSectionContentContainer = styled.div`
