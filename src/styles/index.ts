@@ -108,6 +108,37 @@ export const MetricsSection = styled.section`
 
 export const TestimonialsSection = styled.section`
   display: flex;
+  width: 100%;
+  min-height: 40vh;
+  align-items: center;
+  background-color: ${({ theme }) => theme.colors.white100};
+`;
+
+export const TestimonialsSectionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1900px;
+  margin: 0 auto;
+  padding: 80px 40px 40px 0;
+  & h1 {
+    color: ${({ theme }) => theme.colors.black100};
+    font-weight: 800;
+    text-align: center;
+  }
+  @media (max-width: 1080px) {
+    flex-direction: column;
+  }
+`;
+
+export const TestimonialsCardsContainer = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 56px auto -80px;
+  @media (max-width: 1080px) {
+    flex-direction: column;
+  }
 `;
 
 
@@ -118,6 +149,3 @@ export const MetricsSectionContainer = styled.div`
   display: flex;
 `;
 
-export const TestimonialSectionContainer = styled.div`
-  display: flex;
-`;

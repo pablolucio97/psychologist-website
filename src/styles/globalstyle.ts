@@ -169,4 +169,8 @@ export const GlobalStyle = createGlobalStyle`
   text-align: justify;
  }
 
+ .testimonialCard{
+  width: 320px;
+ }
+
 `;

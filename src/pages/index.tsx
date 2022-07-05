@@ -3,9 +3,10 @@ import Head from 'next/head'
 import { NextImage } from '../components/Next/NextImage'
 import { Title } from '../components/Typography/Title'
 import { Text } from '../components/Typography/Text'
-import { BannerSection, BannerSectionContainer, Container, IntroductionSection, IntroductionSectionContainer, IntroductionSectionContentContainer, IntroductionSectionImageContainer, ServicesContainer, ServicesContentContainer, ServicesGroupsContainer } from '../styles'
-import { services } from '../data/data'
+import { BannerSection, BannerSectionContainer, Container, IntroductionSection, IntroductionSectionContainer, IntroductionSectionContentContainer, IntroductionSectionImageContainer, ServicesContainer, ServicesContentContainer, ServicesGroupsContainer, TestimonialsCardsContainer, TestimonialsSection, TestimonialsSectionContainer } from '../styles'
+import { services, testimonials } from '../data/data'
 import { GroupInfo } from '../components/Elements/GroupInfo'
+import { TestimonialCard } from '../components/Cards/TestimonialCard'
 
 const Home: NextPage = () => {
 
@@ -69,6 +70,25 @@ const Home: NextPage = () => {
           </ServicesGroupsContainer>
         </ServicesContentContainer>
       </ServicesContainer>
+      <TestimonialsSection id='oquedizem'>
+        <TestimonialsSectionContainer>
+          <Title
+            content='O que meus clientes dizem'
+          />
+          <TestimonialsCardsContainer>
+            {testimonials.map((testimonial) => (
+              <TestimonialCard
+                key={testimonial.name}
+                personName={testimonial.name}
+                personPhotoUrl={testimonial.url}
+                testimonial={testimonial.testimonial}
+                cardClassName='testimonialCard'
+              />
+            ))}
+          </TestimonialsCardsContainer>
+        </TestimonialsSectionContainer>
+      </TestimonialsSection>
+ 
     </Container>
   )
 }

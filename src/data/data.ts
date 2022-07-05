@@ -1,28 +1,25 @@
 export const testimonials = [
   {
-    url: "/image_seeds/warrant_seal1.png",
+    url: "/image_seeds/person1.jpg",
     name: "Lorena Santos",
     role: "Designer",
-    ratings: 5,
     testimonial:
-      "Os treinos são sensacionais, estou treinando em casa desde o inicio da quarentena, e estou adorando!",
+      "Atenciosa, me ajudou a enfrentar fases difíceis na minha vida. Excelente profissional.",
   },
   {
-    url: "/image_seeds/warrant_seal2.png",
-    name: "Marcela de Oliveira",
-    role: "Full-stack developer",
-    ratings: 4,
-    testimonial:
-      "Seus treinos fizeram muita diferença no meu corpo e na minha saúde mental nessa Pandemia!",
-  },
-  {
-    url: "/image_seeds/warrant_seal3.png",
+    url: "/image_seeds/person2.jpg",
     name: "Márcio José",
     role: "Front-end developer",
-    ratings: 5,
     testimonial:
-      "Os treinos são sensacionais, estou treinando em casa desde o inicio da quarentena, e estou adorando!",
-  }
+      "Teve todo o cuidado no tratamento com meu filho. Sem palavras para agradecer sua dedicação.",
+  },
+  {
+    url: "/image_seeds/person3.jpg",
+    name: "Marcela de Oliveira",
+    role: "Full-stack developer",
+    testimonial:
+      "Profissional excelente. Acompanhou todo o meu processo de recuperação. Só tenho a agradecer.",
+  },
 ];
 
 export const services = [
