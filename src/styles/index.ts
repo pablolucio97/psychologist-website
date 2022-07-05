@@ -214,7 +214,7 @@ export const CountUpContainer = styled.div`
 export const ContactSection = styled.section`
   display: flex;
   width: 100%;
-  min-height: 80vh;
+  min-height: 40vh;
   background-color: ${({ theme }) => theme.colors.white100};
 `;
 
@@ -224,7 +224,7 @@ export const ContactSectionContainer = styled.div`
   align-items: center;
   width: 1900px;
   margin: 0 auto;
-  padding: 80px 40px;
+  padding: 80px 40px 0;
   background-color: ${({ theme }) => theme.colors.white100};
   @media (max-width: 720px) {
     padding: 40px 40px 0;
