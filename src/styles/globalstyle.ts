@@ -130,7 +130,7 @@ export const GlobalStyle = createGlobalStyle`
     font-size: ${({ theme }) => theme.sizes.xxhuge};
     font-weight: 800;
     text-align: center;
-    color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.white100};
     @media(max-width: 1080px){
       font-size: ${({ theme }) => theme.sizes.xhuge};
     }

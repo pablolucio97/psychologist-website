@@ -3,17 +3,22 @@ import Head from 'next/head'
 import { NextImage } from '../components/Next/NextImage'
 import { Title } from '../components/Typography/Title'
 import { Text } from '../components/Typography/Text'
-import { BannerSection, BannerSectionContainer, Container, IntroductionSection, IntroductionSectionContainer, IntroductionSectionContentContainer, IntroductionSectionImageContainer, ServicesContainer, ServicesContentContainer, ServicesGroupsContainer, TestimonialsCardsContainer, TestimonialsSection, TestimonialsSectionContainer } from '../styles'
+import { BannerSection, BannerSectionContainer, Container, CountUpContainer, CountUpGroupContainer, IntroductionSection, IntroductionSectionContainer, IntroductionSectionContentContainer, IntroductionSectionImageContainer, MetricsSection, MetricsSectionContainer, ServicesContainer, ServicesContentContainer, ServicesGroupsContainer, TestimonialsCardsContainer, TestimonialsSection, TestimonialsSectionContainer } from '../styles'
 import { services, testimonials } from '../data/data'
 import { GroupInfo } from '../components/Elements/GroupInfo'
 import { TestimonialCard } from '../components/Cards/TestimonialCard'
+import { RevealFade } from '../components/Animations/RevealFade'
+import { SubTitle } from '../components/Typography/SubTitle'
+import dynamic from 'next/dynamic'
+
+const CountUp = dynamic(() => import('react-countup'), { ssr: false })
 
 const Home: NextPage = () => {
 
   return (
     <Container style={{ marginBottom: 120 }}>
       <Head>
-        <title> MyPage | Home</title>
+        <title>Simone Pscicologia</title>
         {/* @ts-ignore */}
         <meta charset="UTF-8" />
         <meta name="description" content="Landing pages de alta conversão e sites institucionais para o seu negócio." />
@@ -88,6 +93,55 @@ const Home: NextPage = () => {
           </TestimonialsCardsContainer>
         </TestimonialsSectionContainer>
       </TestimonialsSection>
+      <MetricsSection id='experiencia'>
+        <MetricsSectionContainer>
+          <RevealFade>
+            <Title
+              content='Experiência'
+            />
+          </RevealFade>
+          <CountUpGroupContainer>
+            <CountUpContainer>
+              <CountUp
+                start={100}
+                end={200}
+                prefix='+ de '
+                className='countUp'
+                duration={3}
+              />
+              <SubTitle
+                content='Atendimentos realizados'
+              />
+            </CountUpContainer>
+            <CountUpContainer>
+              <CountUp
+                start={20}
+                end={80}
+                prefix='+ de '
+                className='countUp'
+                duration={3}
+              />
+              <SubTitle
+                content='Lares transformados'
+              />
+            </CountUpContainer>
+
+            <CountUpContainer>
+              <CountUp
+                start={4}
+                end={17}
+                prefix='+ de '
+                className='countUp'
+                duration={4}
+              />
+              <SubTitle
+                content='Anos de profissão'
+              />
+            </CountUpContainer>
+
+          </CountUpGroupContainer>
+        </MetricsSectionContainer>
+      </MetricsSection>
  
     </Container>
   )
